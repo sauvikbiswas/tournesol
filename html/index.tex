@@ -1,0 +1,17 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheoremstyle{mydef}
+{\topsep}{\topsep}%
+{}{}%
+{\bfseries}{}
+{\newline}
+{%
+  \thmname{#1}~\thmnumber{#2}\thmnote{\ -\ #3}.\\*[-1.5ex]%
+  }%
+\theoremstyle{mydef}
+\newtheorem{definition}{Definition}
+\setlength{\parindent}{0cm}
+\begin{document}
+\input{functions}
+\end{document}

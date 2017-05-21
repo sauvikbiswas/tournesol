@@ -1,0 +1,6 @@
+#!/bin/bash
+cp *.tex html/
+cp *.cfg html/
+cd html
+htlatex index.tex "config.cfg, charset=utf-8" " -cunihtf -utf8"
+pdflatex index.tex

@@ -1,0 +1,58 @@
+\chapter{Functions}
+In calculus, one of the first thing a student has to understand is the concept of functions. Yet, it is one of the most overlooked part of high-school mathematics.
+
+\begin{definition}[Function]
+A function is a relation between a set of inputs to a set of outputs. For a given input, it has one and only one particular output
+\end{definition}
+
+It is often written in the following form -- $y = f(x)$, where $x$ is the input and $y$ is the output.
+
+The letters $x$, $y$, and $f$ are arbitrary placeholders. You can substitute these with anything. For many real-world applications, they are meant to be substituted in order to obtain tangible values. In fact, they can be substituted with a different set of placeholders without losing the intended meaning.
+
+Let us look at a function that doubles the input.
+
+\begin{equation}
+y = f(x) = 2x
+\end{equation}
+
+Here, $x$ can take any number. It could be an integer, say, $x = 2$. Then,
+
+\begin{equation}
+y = f(x) = 2x = 2 \times 2 = 4
+\end{equation}
+
+What if $x$ is a complex number, say, $x = 5 + 3i$? In that case,
+
+\begin{equation}
+y = f(x) = 2x = 2 \times (5 + 3i) = 10 + 6i
+\end{equation}
+
+It must be noted that, no matter what we plug-in as $x$, the output (or $y$) is the same for a given value of $x$.
+
+Let us consider a very different kind of function. What if we want to compute the number of unique letters a word has? Let us call this function $c$.
+
+\begin{equation}
+y = c(x) = \text{number of unique letters in $x$}
+\end{equation}
+
+Here are some computed cases --
+
+\begin{equation}
+x = \text{``HELLO"}; y = c(x) = c(\text{``HELLO"}) = 4
+\end{equation}
+\begin{equation}
+x = \text{``OVER"}; y = c(x) = c(\text{``OVER"}) = 4
+\end{equation}
+\begin{equation}
+x = \text{``WATERMELON"}; y = c(x) = c(\text{``WATERMELON"}) = 9
+\end{equation}
+
+Just like the earlier example, we observe that the output for a given input is fixed. $c(\text{``Hello"})$ will never be 2, 3, 5, 6, or anything other than 4.
+
+There is another aspect that must be highlighted. The input to this function cannot be anything under the sun. For example, $c(x)$ makes no sense when $x$ is a real number, a complex numer, or even a word from the Indian languages. This restriction to the type of input a function can accept gives rise to the domain of the function.
+
+\begin{definition}[Domain of a function]
+The domain of a function is the set of input values for which the function is defined.
+\end{definition}
+
+The output of $c(x)$ will invariably be a positive integer. You can't have it return a floating point number. I can't think of any word whose unique letter count is 3.14156. Can you?
