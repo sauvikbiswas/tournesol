@@ -19,6 +19,11 @@
 .cmbsy-5{font-weight: bold;}
 .cmex-7{font-size:70%;}
 .cmex-7x-x-71{font-size:49%;}
+.msam-7{font-size:70%;}
+.msam-5{font-size:50%;}
+.msbm-7{font-size:70%;}
+.msbm-5{font-size:50%;}
+@media print {span.next {visibility:hidden;}}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }

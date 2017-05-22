@@ -1,3 +1,5 @@
 \expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
-\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Functions}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{2}{x2-10001}{QQ2-2-1}{Functions}}{3}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{2}{x2-20001.1}{QQ2-2-2}{What is a function?}}{3}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{2}{x2-30001.2}{QQ2-2-3}{Understanding discontinuities}}{7}\relax 
 \par 

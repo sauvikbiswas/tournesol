@@ -1,6 +1,8 @@
 \chapter{Functions}
 In calculus, one of the first thing a student has to understand is the concept of functions. Yet, it is one of the most overlooked part of high-school mathematics.
 
+\section{What is a function?}
+
 \begin{definition}[Function]
 A function is a relation between a set of inputs to a set of outputs. For a given input, it has one and only one particular output
 \end{definition}
@@ -17,15 +19,15 @@ y = f(x) = 2x
 
 Here, $x$ can take any number. It could be an integer, say, $x = 2$. Then,
 
-\begin{equation}
-y = f(x) = 2x = 2 \times 2 = 4
-\end{equation}
+\[
+y = f(2) = 2 \times 2 = 4
+\]
 
 What if $x$ is a complex number, say, $x = 5 + 3i$? In that case,
 
-\begin{equation}
-y = f(x) = 2x = 2 \times (5 + 3i) = 10 + 6i
-\end{equation}
+\[
+y = f(5 + 3i) = 2 \times (5 + 3i) = 10 + 6i
+\]
 
 It must be noted that, no matter what we plug-in as $x$, the output (or $y$) is the same for a given value of $x$.
 
@@ -33,26 +35,111 @@ Let us consider a very different kind of function. What if we want to compute th
 
 \begin{equation}
 y = c(x) = \text{number of unique letters in $x$}
+\label{eq:unique}
 \end{equation}
 
-Here are some computed cases --
+Here are some computed cases for $x = \text{``HELLO"}$, $x = \text{``OVER"}$, and $x = \text{``WATERMELON"}$ respectively.
 
-\begin{equation}
-x = \text{``HELLO"}; y = c(x) = c(\text{``HELLO"}) = 4
-\end{equation}
-\begin{equation}
-x = \text{``OVER"}; y = c(x) = c(\text{``OVER"}) = 4
-\end{equation}
-\begin{equation}
-x = \text{``WATERMELON"}; y = c(x) = c(\text{``WATERMELON"}) = 9
-\end{equation}
+\[
+y = c(\text{``HELLO"}) = 4
+\]
+\[
+y = c(\text{``OVER"}) = 4
+\]
+\[
+y = c(\text{``WATERMELON"}) = 9
+\]
 
 Just like the earlier example, we observe that the output for a given input is fixed. $c(\text{``Hello"})$ will never be 2, 3, 5, 6, or anything other than 4.
 
-There is another aspect that must be highlighted. The input to this function cannot be anything under the sun. For example, $c(x)$ makes no sense when $x$ is a real number, a complex numer, or even a word from the Indian languages. This restriction to the type of input a function can accept gives rise to the domain of the function.
+There is another aspect that must be highlighted. The input to this function cannot be anything under the sun. For example, $c(x)$ makes no sense when $x$ is a real number, a complex numer, or even a word from the Indian languages. This restriction to the type of input that a function can accept, gives rise to the domain of the function.
 
 \begin{definition}[Domain of a function]
 The domain of a function is the set of input values for which the function is defined.
 \end{definition}
 
 The output of $c(x)$ will invariably be a positive integer. You can't have it return a floating point number. I can't think of any word whose unique letter count is 3.14156. Can you?
+
+This brings us to the definition of codomain.
+\begin{definition}[Codomain]
+Codomain is the set of into which all of the output of the function is constrained to fall.
+\end{definition}
+
+Clearly, the codomain of $c(x)$ in equation  \eqref{eq:unique} is the set of natural numbers. Or, as they are often denoted in mathematics, $y \in \mathbb{N}$.
+
+The description of a function may not be so simple. The choice of the function's form may depend on the input itself. Let us look at an example.
+\begin{equation}
+    y = f(x)=
+\begin{cases}
+    x, & \text{if } x\geq 0\\
+    0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+For this function, if you insert a number that is negative, the output is 0. The graph of the function looks like this --
+
+:insert graph here:
+
+These kind of functions have a name. They are called conditionals.
+
+\section{Understanding discontinuities}
+
+Conditionals do not always behave well. You can easily construct a conditional that is broken. Let us look at one such case.
+
+\begin{equation}
+    y = f(x)=
+\begin{cases}
+    5 ,& \text{if } x > 4\\
+    0, & \text{if } x < 4
+\end{cases}
+\label{eq:incomplete}
+\end{equation}
+
+Clearly, the function tells us nothing about a situation when we feed it $x=4$ as input. We can argue that 4 is not the domain of the function as it is not described by the function itself.
+
+Fair enough. let us rectify the function in equation \eqref{eq:incomplete} and re-define the first part of the conditional with a $\geq$ sign instead of a $>$ sign.
+
+\begin{equation}
+    y = f(x)=
+\begin{cases}
+    5 ,& \text{if } x \geq 4\\
+    0, & \text{if } x < 4
+\end{cases}
+\label{eq:complete}
+\end{equation}
+
+The curve looks like this --
+
+:insert graph here:
+
+We now have a complete definition of the function. Still, there is a nagging problem. What would happen if we try to approach the value from left. Let us assume a situation where you are asked to run towards $x=4$ from $x=0$ and asked to halve your speed as you get closer and closer to $x=4$. (Let's say, there is a force field at x=4.) You would never reach $x=4$ in any finite time, but you would get close, very, very close. You would be at what mathematically is referred to as $x=4-$. The value of $y$ you will observe from here would be 0. Similarly, if you did the same exercise while running from $x=8$ to $x=4$, you would reach a point that can be written as $x=4+$. Here you would observe that the value of the function is 5.
+
+This is a type of discontinuity. There is also a name for such kind of discontinuity. It's called a jump discontinuity.
+
+What about the following function? What happens when we plug-in $x=1$?
+
+\begin{equation}
+    y = g(x) = \frac{1}{x-1}
+\end{equation}
+
+:insert graph here:
+
+Studying its graph, we notice that the function is not defined at $x = 1$. This is not because someone has goofed around with the function at $x=1$ but by the very nature of $g(x)$. The output vanishes at $-\infty$ at $x=1-$ and reappears at $+\infty$ at $x=1+$ leaving no way for us to figure out what exactly happens at $x=1$. There is a name for this kind of discontinuity -- asymptotic discontinuity.
+
+There is another type of discontinuity that must be mentioned. It is known as a point discontinuity. Let us take the following function --
+
+\begin{equation}
+    y = f(x)=
+\begin{cases}
+    5 ,& \text{if } x > 4\\
+    0, & \text{if } x = 4\\
+    5, & \text{if } x < 4
+\end{cases}
+\label{eq:complete}
+\end{equation}
+
+:insert graph here:
+
+This is a diabolical function. If you approach it from the right ($x=4+$), you land up with a value of 5. If you approach it from left ($x=4-$), you also land up with a value of 5. However, if you parachute and land exactly at $x=4$, you obtain a value of 0!
+
+We will encounter the concept of discontinuity as we dwelve deeper into calculus. In fact, study of discontinuities is an important aspect of this subject.

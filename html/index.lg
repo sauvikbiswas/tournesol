@@ -8,6 +8,8 @@ htfcss: cmmib font-style: italic; font-weight: bold;
 File: index.html
 File: index.css
 File: index.tmp
+File: indexch1.html
+Css: @media print {span.next {visibility:hidden;}}
 Css: p.noindent { text-indent: 0em }
 Css: td p.noindent { text-indent: 0em; margin-top:0em; }
 Css: p.nopar { text-indent: 0em; }
@@ -153,3 +155,9 @@ Font("cmbsy","7","7","100")
 Font("cmbsy","5","5","100")
 Font("cmex","7","7","100")
 Font("cmex","7","7","71")
+Font("msam","10","10","100")
+Font("msam","7","7","100")
+Font("msam","5","5","100")
+Font("msbm","10","10","100")
+Font("msbm","7","7","100")
+Font("msbm","5","5","100")

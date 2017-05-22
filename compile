@@ -1,6 +1,8 @@
 #!/bin/bash
+rm --rf html/
+mkdir html
 cp *.tex html/
 cp *.cfg html/
 cd html
-htlatex index.tex "config.cfg, charset=utf-8" " -cunihtf -utf8"
+htlatex index.tex "config.cfg, charset=utf-8, html,2,next" " -cunihtf -utf8"
 pdflatex index.tex

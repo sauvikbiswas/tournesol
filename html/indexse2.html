@@ -1,0 +1,308 @@
+<!DOCTYPE html> 
+<html> 
+<head><title>Understanding discontinuities</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="index.css" /> 
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+<!--l. 85--><div class="crosslinks"><p class="noindent">[<a 
+href="indexse1.html" >prev</a>] [<a 
+href="indexse1.html#tailindexse1.html" >prev-tail</a>] [<a 
+href="#tailindexse2.html">tail</a>] [<a 
+href="indexch1.html#indexse2.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x4-30001.2"></a>Understanding discontinuities</h3>
+<!--l. 87--><p class="noindent" >Conditionals do not always behave well. You can easily construct a conditional that
+is broken. Let us look at one such case.
+</p>
+<table class="equation"><tr><td> <a 
+ id="x4-3001r4"></a>
+<!--l. 89--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+<mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  style="text-align:axis;"  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"><mtr><mtd 
+class="array"  columnalign="left"><mn>5</mn><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle><mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>4</mn></mtd></mtr><mtr><mtd 
+class="array"  columnalign="left"><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mspace width="1em" class="quad"/> </mtd> <mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>4</mn></mtd></mtr><!--@{}l@{\quad }l@{}--></mtable>                                                                                          </mrow></mfenced>
+</math></td><td class="eq-no">(1.4)</td></tr></table>
+<!--l. 98--><p class="noindent" >Clearly, the function tells us nothing about a situation when we feed it
+<!--l. 98--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math> as
+input. We can argue that 4 is not the domain of the function as it is not described by
+the function itself.
+</p><!--l. 100--><p class="noindent" >Fair enough. let us rectify the function in equation (<a 
+href="#x4-3001r4">1.4<!--tex4ht:ref: eq:incomplete --></a>) and re-deﬁne the ﬁrst part of the
+conditional with a <!--l. 100--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">≥</mo></math>
+sign instead of a <!--l. 100--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x003E;</mo></math>
+sign.
+</p>
+<table class="equation"><tr><td> <a 
+ id="x4-3002r5"></a>
+<!--l. 102--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+<mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  style="text-align:axis;"  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"><mtr><mtd 
+class="array"  columnalign="left"><mn>5</mn><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle><mi 
+>x</mi> <mo 
+class="MathClass-rel">≥</mo> <mn>4</mn></mtd></mtr><mtr><mtd 
+class="array"  columnalign="left"><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mspace width="1em" class="quad"/> </mtd> <mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>4</mn></mtd></mtr><!--@{}l@{\quad }l@{}--></mtable>                                                                                          </mrow></mfenced>
+</math></td><td class="eq-no">(1.5)</td></tr></table>
+
+<!--l. 111--><p class="noindent" >The curve looks like this –
+</p><!--l. 113--><p class="noindent" >:insert graph here:
+</p><!--l. 115--><p class="noindent" >We now have a complete deﬁnition of the function. Still, there is a
+nagging problem. What would happen if we try to approach the value
+from left. Let us assume a situation where you are asked to run towards
+<!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math> from
+<!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+and asked to halve your speed as you get closer and closer to
+<!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math>.
+(Let&#x2019;s say, there is a force ﬁeld at x=4.) You would never reach
+<!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math> in any ﬁnite
+time, but you would get close, very, very close. You would be at what mathematically is
+referred to as <!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-bin">−</mo></math>.
+The value of <!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math>
+you will observe from here would be 0. Similarly, if you did the same exercise while running
+from <!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>8</mn></math> to
+<!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math>, you would reach a point
+that can be written as <!--l. 115--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-bin">+</mo></math>.
+Here you would observe that the value of the function is 5.
+</p><!--l. 117--><p class="noindent" >This is a type of discontinuity. There is also a name for such kind of discontinuity.
+It&#x2019;s called a jump discontinuity.
+</p><!--l. 119--><p class="noindent" >What about the following function? What happens when we plug-in
+<!--l. 119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>?
+</p>
+<table class="equation"><tr><td> <a 
+ id="x4-3003r6"></a>
+<!--l. 121--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                          <mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>    <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">−</mo> <mn>1</mn></mrow></mfrac>
+</math></td><td class="eq-no">(1.6)</td></tr></table>
+<!--l. 125--><p class="noindent" >:insert graph here:
+</p><!--l. 127--><p class="noindent" >Studying its graph, we notice that the function is not deﬁned at
+<!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>.
+This is not because someone has goofed around with the function at
+<!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math> but by the very
+nature of <!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>. The
+output vanishes at <!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-bin">−</mo><mi 
+>∞</mi></math>
+at <!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-bin">−</mo></math> and
+reappears at <!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-bin">+</mo> <mi 
+>∞</mi></math>
+
+at <!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-bin">+</mo></math>
+leaving no way for us to ﬁgure out what exactly happens at
+<!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>.
+There is a name for this kind of discontinuity – asymptotic discontinuity.
+</p><!--l. 129--><p class="noindent" >There is another type of discontinuity that must be mentioned. It is known as a point
+discontinuity. Let us take the following function –
+</p>
+<table class="equation"><tr><td> <a 
+ id="x4-3004r7"></a>
+<!--l. 131--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+<mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  style="text-align:axis;"  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"><mtr><mtd 
+class="array"  columnalign="left"><mn>5</mn><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle><mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>4</mn></mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="left"><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mspace width="1em" class="quad"/></mtd><mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="left"><mn>5</mn><mo 
+class="MathClass-punc">,</mo> <mspace width="1em" class="quad"/></mtd><mtd 
+class="array"  columnalign="left"><mstyle 
+class="text"><mtext  >if </mtext></mstyle><mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>4</mn></mtd></mtr><mtr><mtd 
+class="array"  columnalign="left"> <mspace width="1em" class="quad"/> </mtd></mtr><!--@{}l@{\quad }l@{}--></mtable>                                                                                          </mrow></mfenced>
+</math></td><td class="eq-no">(1.7)</td></tr></table>
+<!--l. 141--><p class="noindent" >:insert graph here:
+</p><!--l. 143--><p class="noindent" >This is a diabolical function. If you approach it from the right
+(<!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-bin">+</mo></math>),
+you land up with a value of 5. If you approach it from left
+(<!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-bin">−</mo></math>), you
+also land up with a value of 5. However, if you parachute and land exactly at
+<!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math>, you
+obtain a value of 0!
+</p><!--l. 145--><p class="noindent" >We will encounter the concept of discontinuity as we dwelve deeper into calculus. In
+fact, study of discontinuities is an important aspect of this subject.  </p><!--l. 18--><div class="crosslinks"><p class="noindent">[<a 
+href="indexse1.html" >prev</a>] [<a 
+href="indexse1.html#tailindexse1.html" >prev-tail</a>]
+[<a 
+href="indexse2.html" >front</a>] [<a 
+href="indexch1.html#indexse2.html" >up</a>] </p></div>
+<!--l. 18--><p class="noindent" ><a 
+ id="tailindexse2.html"></a> </p> 
+</body> 
+</html>
