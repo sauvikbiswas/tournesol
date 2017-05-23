@@ -1,7 +1,7 @@
 \chapter{Functions}
 In calculus, one of the first thing a student has to understand is the concept of functions. Yet, it is one of the most overlooked part of high-school mathematics.
 
-\section{What is a function?}
+\section{A function?}
 
 \begin{definition}[Function]
 A function is a relation between a set of inputs to a set of outputs. For a given input, it has one and only one particular output
@@ -74,6 +74,7 @@ The description of a function may not be so simple. The choice of the function's
     x, & \text{if } x\geq 0\\
     0, & \text{otherwise}
 \end{cases}
+\label{eq:cond}
 \end{equation}
 
 For this function, if you insert a number that is negative, the output is 0. The graph of the function looks like this --
@@ -81,6 +82,12 @@ For this function, if you insert a number that is negative, the output is 0. The
 :insert graph here:
 
 These kind of functions have a name. They are called conditionals.
+
+\section{Graphing a function}
+
+In the example above, I have graphed the function described in equation \eqref{eq:cond}. You might realise that graphing a function is an important aspect of understanding the principles involved in calculus. It is also a fundamental technique to hone your intuition. While not everything can be graphed, most of the introductory level problems can be. For most engineering applications, I have seldom come across a function that cannot be graphed.
+
+That's all I have to say about this.
 
 \section{Understanding discontinuities}
 
@@ -114,7 +121,7 @@ The curve looks like this --
 
 We now have a complete definition of the function. Still, there is a nagging problem. What would happen if we try to approach the value from left. Let us assume a situation where you are asked to run towards $x=4$ from $x=0$ and asked to halve your speed as you get closer and closer to $x=4$. (Let's say, there is a force field at x=4.) You would never reach $x=4$ in any finite time, but you would get close, very, very close. You would be at what mathematically is referred to as $x=4-$. The value of $y$ you will observe from here would be 0. Similarly, if you did the same exercise while running from $x=8$ to $x=4$, you would reach a point that can be written as $x=4+$. Here you would observe that the value of the function is 5.
 
-This is a type of discontinuity. There is also a name for such kind of discontinuity. It's called a jump discontinuity.
+This is a type of discontinuity. There is also a name for such kind of discontinuity. It's called a \textbf{jump discontinuity}.
 
 What about the following function? What happens when we plug-in $x=1$?
 
@@ -124,9 +131,9 @@ What about the following function? What happens when we plug-in $x=1$?
 
 :insert graph here:
 
-Studying its graph, we notice that the function is not defined at $x = 1$. This is not because someone has goofed around with the function at $x=1$ but by the very nature of $g(x)$. The output vanishes at $-\infty$ at $x=1-$ and reappears at $+\infty$ at $x=1+$ leaving no way for us to figure out what exactly happens at $x=1$. There is a name for this kind of discontinuity -- asymptotic discontinuity.
+Studying its graph, we notice that the function is not defined at $x = 1$. This is not because someone has goofed around with the function at $x=1$ but by the very nature of $g(x)$. The output vanishes at $-\infty$ at $x=1-$ and reappears at $+\infty$ at $x=1+$ leaving no way for us to figure out what exactly happens at $x=1$. There is a name for this kind of discontinuity -- \textbf{asymptotic discontinuity}.
 
-There is another type of discontinuity that must be mentioned. It is known as a point discontinuity. Let us take the following function --
+There is another type of discontinuity that must be mentioned. It is known as a \textbf{point discontinuity}. Let us take the following function --
 
 \begin{equation}
     y = f(x)=
@@ -143,3 +150,38 @@ There is another type of discontinuity that must be mentioned. It is known as a 
 This is a diabolical function. If you approach it from the right ($x=4+$), you land up with a value of 5. If you approach it from left ($x=4-$), you also land up with a value of 5. However, if you parachute and land exactly at $x=4$, you obtain a value of 0!
 
 We will encounter the concept of discontinuity as we dwelve deeper into calculus. In fact, study of discontinuities is an important aspect of this subject.
+
+\section{Inversion of a function}
+
+A function may or may not have an inversion. Let's say that the function is $y=f(x)$. There may exist a function, $g$, which when fed the output of $f$ as input, would return the input of $f$ as its output. Sounds confusing? Let me assure you, it's not.
+
+\begin{equation}
+    \text{if } y = f(x)\text{, and, } x = g(y)\text{; then, }g = f^{-1}
+\end{equation}
+
+Here is a concrete example. If $y = f(x) = x+2$ then $y = g(x) = x-2$ is the inverse function. Don't get confused by the x's and y's. These are arbitrary letters. You can choose whatever symbol you want. Can you see why $g$ is the inverse function of $f$?
+
+Let's take a number -- say, 2. If we feed 2 as input to $f$. we get 4 as the output. If we then feed 4 into $g$, we get back 2.
+
+There are two points I would like to highlight.
+
+Firstly, not every function has an inverse. For example, $y = f(x) = x^2$. The inverse function may appear to be $y = g(x) = \sqrt{x}$ but in order for this to be function, we must imply that the square-root operator return a positive number. Generally, we obtain two numbers on either side of 0 when we perform a square root. For example, $\sqrt{4}$ can be 2 or -2.
+
+Another way to take care of such a scenario is to restrict the domain of the function. We may say that the domain of $x$ is restricted to postive, real numbers. In such a case, we can write --
+
+\[
+  \text{if, }y = f(x) = x^{2} \forall x \in \mathbb{R}, x \ge 0\text{; then, }f^{-1}(x) = \sqrt{x} \forall x \in \mathbb{R}, x \ge 0
+\]
+
+Just by restricting the domain, our inverse function becomes a logically correct "undo" operation.
+
+Secondly, there are functions whose inverse function is the same function. This is usually referred to as symmetry. (Be careful, symmetric functions are different entities altogether.)
+
+Formally,
+\begin{equation}
+    f = f^{-1}
+\end{equation}
+
+This looks cryptic but intuititively, it's fairly simple. Let us take the function $y = f(x) = -x$. This function flips the sign of whatever is fed as an input. In order to get back the original input from the output, you'll have to, you guessed it, flip the sign. Thus, $f^{-1}(x) = -x = f(x)$.
+
+There are many other common examples of such symmetry. Take for example, the identity function, $y = f(x) = x$, or the reciprocal function, $y = f(x) = 1/x$. These symmetries are heavily used in mathematics to skip multiple steps in a derivation.
